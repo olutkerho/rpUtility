@@ -15,10 +15,5 @@ namespace rpUtility {
 
             
         }
-
-        private void turhake()
-        {
-
-        }
     }
 }

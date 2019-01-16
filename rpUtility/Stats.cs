@@ -178,6 +178,66 @@ namespace rpUtility {
             }
             return ret;
         }
+
+        public void setStrengthMod(){
+            if (Strength != -1 && Strength != 0){
+                StrengthMod = Strength / 2 - 5;
+            }
+        }
+
+        public int getStrengthMod(){
+            return StrengthMod;
+        }
+
+        public void setDexterityMod(){
+            if (Dexterity != -1 && Dexterity != 0){
+                DexterityMod = Dexterity/ 2 - 5;
+            }
+        }
+
+        public int getDexterityMod(){
+            return DexterityMod;
+        }
+
+        public void setConstitutionMod(){
+            if (Constitution != -1 && Constitution!= 0){
+                ConstitutionMod = Constitution/ 2 - 5;
+            }
+        }
+
+        public int getConstitutionMod(){
+            return ConstitutionMod;
+        }
+
+        public void setIntelligenceMod(){
+            if (Intelligence != -1 && Intelligence!= 0){
+                IntelligenceMod = Intelligence/ 2 - 5;
+            }
+        }
+
+        public int getIntelligenceMod(){
+            return IntelligenceMod;
+        }
+
+        public void setWisdomMod(){
+            if (Wisdom != -1 && Wisdom!= 0){
+                WisdomMod = Wisdom / 2 - 5;
+            }
+        }
+
+        public int getWisdomMod(){
+            return WisdomMod;
+        }
+
+        public void setCharismaMod(){
+            if (Charisma != -1 && Charisma!= 0){
+                CharismaMod= Charisma / 2 - 5;
+            }
+        }
+
+        public int getCharismaMod(){
+            return CharismaMod;
+        }
     }
 
 }

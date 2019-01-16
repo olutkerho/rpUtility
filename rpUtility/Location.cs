@@ -25,6 +25,7 @@ namespace rpUtility {
         private List<NPC> NPCs; //testi----loop????
 
         public Location(){
+            // ctorissa kannattaa aina alustaa lista, muuten on null ja pitää alustaa eriksee siellä missä tarvitaa
             
         }
 
