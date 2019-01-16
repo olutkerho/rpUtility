@@ -33,6 +33,12 @@ namespace rpUtility {
         private int PassivePerception;
 
         public Stats() {
+            Traits = new List<string>();
+            Proficiencies = new List<string>();
+            Spells = new List<Spell>();
+            Attacks = new List<Attack>();
+            SpellSlots = new List<SpellSlot>();
+            Skills = new List<Skill>();
         }
 
         public void setStrength(int strength) {

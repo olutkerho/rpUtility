@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace rpUtility {
     class Location{
-
         private string Name;
         private string CountryName;
         private int Population;
@@ -22,11 +21,8 @@ namespace rpUtility {
         private bool HasInn;
         private bool HasStables;
         private string LeaderName;
-        private List<NPC> NPCs; //testi----loop????
 
         public Location(){
-            // ctorissa kannattaa aina alustaa lista, muuten on null ja pitää alustaa eriksee siellä missä tarvitaa
-            
         }
 
         public void setName(string name) {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace rpUtility {
     class Alliance {
@@ -16,10 +17,9 @@ namespace rpUtility {
         private int Age;
         private string Bio;
         private List<string> Goals;
-        private List<NPC> NPCs;//testi -------loop???
 
         public Alliance() {
-
+            Goals = new List<string>();
         }
 
         public void setName(string name) {
@@ -140,7 +140,7 @@ namespace rpUtility {
                     Goals.RemoveAt(Goals.IndexOf(goal));
                 }
                 catch (Exception ex) {
-                    //Messagebox
+                    MessageBox.Show(ex.Message);
                 }
             }
         }

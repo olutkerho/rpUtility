@@ -15,6 +15,7 @@ namespace rpUtility {
         private string Damage;
 
         public Spell() {
+            Components = new List<string>();
         }
 
         public void setLevel(int level) {

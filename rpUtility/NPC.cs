@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace rpUtility {
 
@@ -15,15 +16,28 @@ namespace rpUtility {
         private int Level;
         private int Xp;
         private string Bio;
-        private Location Location;
+        private string Location;
         private List<Gear> GearList;
-        private Alliance Alliance;
+        private string Alliance;
         private Relations Relations;
-        //stats
-        //roleplay info
+        private Stats Stats;
+        private List<string> Secrets;
+        private List<string> Flaws;
+        private List<string> Perks;
+        private RoleplayInfo RoleplayInfo;
+        //height
+        //weight
+        //skin color
+        //sex
+        //appearance
+
+
 
         public NPC(){
-
+            GearList = new List<Gear>();
+            Secrets = new List<string>();
+            Flaws = new List<string>();
+            Perks = new List<string>();
         }
 
         public void setFirstName(string firstname) {
@@ -38,6 +52,18 @@ namespace rpUtility {
             return ret;
         }
 
+        public void setLocation(string location) {
+            Location = location;
+        }
+
+        public string getLocation() {
+            string ret = "";
+            if (Location != null) {
+                ret = Location;
+            }
+            return ret;
+        }
+
         public void setLastName (string lastname) {
             LastName = lastname;
         }
@@ -46,6 +72,18 @@ namespace rpUtility {
             string ret = "";
             if (LastName != null) {
                 ret = LastName;
+            }
+            return ret;
+        }
+
+        public void setAlliance(string alliance) {
+            Alliance = alliance;
+        }
+
+        public string getAlliance() {
+            string ret = "";
+            if (Alliance != null) {
+                ret = Alliance;
             }
             return ret;
         }
@@ -120,6 +158,51 @@ namespace rpUtility {
                 ret = Bio;
             }
             return ret;
+        }
+
+        public void addSecret(string secret) {
+            Secrets.Add(secret);
+        }
+
+        public void removeSecret(string secret) {
+            if (Secrets.Contains(secret)) {
+                try {
+                    Secrets.RemoveAt(Secrets.IndexOf(secret));
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        public void addFlaw (string flaw) {
+            Flaws.Add(flaw);
+        }
+
+        public void removeFlaw(string flaw) {
+            if (Flaws.Contains(flaw)) {
+                try {
+                    Flaws.RemoveAt(Flaws.IndexOf(flaw));
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        public void addPerk(string perk) {
+            Perks.Add(perk);
+        }
+
+        public void removePerk(string perk) {
+            if (Perks.Contains(perk)) {
+                try {
+                    Perks.RemoveAt(Perks.IndexOf(perk));
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

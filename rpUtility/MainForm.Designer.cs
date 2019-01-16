@@ -1,5 +1,5 @@
 ﻿namespace rpUtility {
-    partial class Form1 {
+    partial class MainForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,13 +23,20 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

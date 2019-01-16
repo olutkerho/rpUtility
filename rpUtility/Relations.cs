@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace rpUtility {
     class Relations {
@@ -13,7 +14,8 @@ namespace rpUtility {
         private List<string> KnownSecrets;
 
         public Relations() {
-
+            KnownTraits = new List<string>();
+            KnownSecrets = new List<string>();
         }
 
         public void setName(string name) {
@@ -62,7 +64,7 @@ namespace rpUtility {
                     KnownTraits.RemoveAt(KnownTraits.IndexOf(knowntrait));
                 }
                 catch (Exception ex) {
-                    //Messagebox
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
@@ -77,7 +79,7 @@ namespace rpUtility {
                     KnownSecrets.RemoveAt(KnownSecrets.IndexOf(knownsecret));
                 }
                 catch (Exception ex) {
-                    //Messagebox
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
