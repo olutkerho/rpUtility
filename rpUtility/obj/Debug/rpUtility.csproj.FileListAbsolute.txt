@@ -1,0 +1,9 @@
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\bin\Debug\rpUtility.exe.config
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\bin\Debug\rpUtility.exe
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\bin\Debug\rpUtility.pdb
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.csprojAssemblyReference.cache
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.Properties.Resources.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.GenerateResource.cache
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.CoreCompileInputs.cache
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.exe
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.pdb
