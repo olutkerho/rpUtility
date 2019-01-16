@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace rpUtility {
-    public class Spells {
+    public class Spell {
         private int Level;
         private string School;
         private List<string> Components;
@@ -14,7 +14,7 @@ namespace rpUtility {
         private string Duration;
         private string Damage;
 
-        public Spells() {
+        public Spell() {
         }
 
         public void setLevel(int level) {
