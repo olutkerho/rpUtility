@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\rpUtility"
   ],
-  "SelectedNode": "\\rpUtility.sln",
+  "SelectedNode": "\\rpUtility\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
