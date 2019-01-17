@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Alliance.cs" />
     <Compile Include="Attack.cs" />
+    <Compile Include="FrmStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStats.Designer.cs">
+      <DependentUpon>FrmStats.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="SpellSlot.cs" />
     <Compile Include="Stats.cs" />
     <Compile Include="XML.cs" />
+    <EmbeddedResource Include="FrmStats.resx">
+      <DependentUpon>FrmStats.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

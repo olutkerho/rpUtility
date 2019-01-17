@@ -22,6 +22,66 @@ namespace rpUtility {
             SerializeNPC(NPCs);
         }
 
+        public static void addAlliance(Alliance alliance)
+        {
+            Alliances.Add(alliance);
+        }
+
+        public static void addNPC(NPC npc)
+        {
+            NPCs.Add(npc);
+        }
+
+        public static void addLocation(Location location)
+        {
+            Locations.Add(location);
+        }
+
+        public static void removeAlliance(Alliance alliance)
+        {
+            if (Alliances.Contains(alliance))
+            {
+                try
+                {
+                    Alliances.RemoveAt(Alliances.IndexOf(alliance));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        public static void removeNPC(NPC npc)
+        {
+            if (NPCs.Contains(npc))
+            {
+                try
+                {
+                    NPCs.RemoveAt(NPCs.IndexOf(npc));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        public static void removeLocation(Location location)
+        {
+            if (Locations.Contains(location))
+            {
+                try
+                {
+                    Locations.RemoveAt(Locations.IndexOf(location));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
         public static void createLists() {
             Alliances = new List<Alliance>();
             NPCs = new List<NPC>();

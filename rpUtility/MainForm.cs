@@ -23,5 +23,11 @@ namespace rpUtility {
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
             XML.saveLists();
         }
+
+        private void btnOpenStats_Click(object sender, EventArgs e)
+        {
+            FrmStats frm = new FrmStats();
+            frm.Show();
+        }
     }
 }
