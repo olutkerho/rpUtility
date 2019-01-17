@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace rpUtility {
-    class Alliance {
+    public class Alliance {
         private string Name;
         private string HqLocation;
         private int Population;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace rpUtility {
     class Skill {
         private string Name;
-        private int Bonus;
+        private string MainSkill;
 
         public Skill() {
         }
@@ -24,12 +24,16 @@ namespace rpUtility {
             return ret;
         }
 
-        public void setBonus(int bonus) {
-            Bonus = bonus;
+        public void setMainSkill(string mainskill) {
+            MainSkill = mainskill;
         }
 
-        public int getBonus() {
-            return Bonus;
-        }
+        public string getMainSkill() {
+            string ret = "";
+            if (MainSkill != null) {
+                ret = MainSkill;
+            }
+            return ret;
+        }        
     }
 }

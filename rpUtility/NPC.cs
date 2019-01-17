@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace rpUtility {
 
-     class NPC{
+     public class NPC{
         private string FirstName;
         private string LastName;
         private int Age;
@@ -30,6 +30,7 @@ namespace rpUtility {
         private string SkinColour;
         private string Sex;
         private string Appearance;
+        private string Race;
 
 
 
@@ -38,6 +39,31 @@ namespace rpUtility {
             Secrets = new List<string>();
             Flaws = new List<string>();
             Perks = new List<string>();
+            Stats = new Stats();
+        }
+
+        public void setStats(Stats stats) {
+            Stats = stats;
+        }
+
+        public Stats getStats() {
+            Stats ret = new Stats();
+            if (Stats != null) {
+                ret = Stats;
+            }
+            return ret;
+        }
+
+        public void setRace(string race) {
+            Race = race;
+        }
+
+        public string getRace() {
+            string ret = "";
+            if (Race != null) {
+                ret = Race;
+            }
+            return ret;
         }
 
         public void setFirstName(string firstname) {

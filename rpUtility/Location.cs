@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace rpUtility {
-    class Location{
+    public class Location{
         private string Name;
         private string CountryName;
         private int Population;
