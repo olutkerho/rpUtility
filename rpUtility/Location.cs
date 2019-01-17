@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace rpUtility {
+    [Serializable]
     public class Location{
         private string Name;
         private string CountryName;

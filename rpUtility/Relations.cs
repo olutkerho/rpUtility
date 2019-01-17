@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace rpUtility {
-    class Relations {
+    [Serializable]
+    public class Relations {
         private string Name;
         private string Opinion;
         private string FirstMet;

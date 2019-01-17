@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace rpUtility {
-    class Skill {
+    [Serializable]
+    public class Skill {
         private string Name;
         private string MainSkill;
 

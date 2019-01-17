@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace rpUtility {
+    [Serializable]
     public class Stats {
         private int Strength;
         private int Dexterity;

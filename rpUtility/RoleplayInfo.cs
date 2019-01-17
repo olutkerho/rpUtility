@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace rpUtility {
-    class RoleplayInfo {
+    [Serializable]
+    public class RoleplayInfo {
         private string VoiceType;
         private string TalkSpeed;
         private string Accent;

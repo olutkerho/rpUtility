@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Serialization;
 using System.Windows.Forms;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace rpUtility {
-    class XML {
-        private static string NPCFile = Directory.GetCurrentDirectory() + "\\NPC.xml";
+    public static class XML {
+        private static string NPCFile = Directory.GetCurrentDirectory() + "\\NPC";
         private static string LocationFile = Directory.GetCurrentDirectory() + "\\Locations.xml";
         private static string AllianceFile = Directory.GetCurrentDirectory() + "\\Alliances.xml";
         private static List<Alliance> Alliances;
@@ -17,9 +18,9 @@ namespace rpUtility {
         private static List<Location> Locations;
 
         public static void saveLists() {
-            SerializeAlliance(Alliances);
-            SerializeLocation(Locations);
-            SerializeNPC(NPCs);
+            SerializeAlliance();
+            SerializeLocation();
+            SerializeBinary(NPCs);
         }
 
         public static void addAlliance(Alliance alliance)
@@ -96,7 +97,7 @@ namespace rpUtility {
         }
 
         public static void readNPCs() {
-            NPCs = DeserializeNPC();
+            NPCs = DeserializeBinary();
             if (NPCs == null) {
                 NPCs = new List<NPC>();
             }
@@ -129,11 +130,11 @@ namespace rpUtility {
             }
         }
 
-        public static void SerializeNPC(List<NPC> input) {
+        public static void SerializeNPC() {
             try {
-                XmlSerializer ser = new XmlSerializer(input.GetType());
+                XmlSerializer ser = new XmlSerializer(NPCs.GetType());
                 StreamWriter sw = new StreamWriter(NPCFile);
-                ser.Serialize(sw, input);
+                ser.Serialize(sw, NPCs);
                 sw.Close();
             }
             catch(Exception ex) {
@@ -161,11 +162,11 @@ namespace rpUtility {
             }
         }
 
-        public static void SerializeLocation(List<Location> input) {
+        public static void SerializeLocation() {
             try {
-                XmlSerializer ser = new XmlSerializer(input.GetType());
+                XmlSerializer ser = new XmlSerializer(Locations.GetType());
                 StreamWriter sw = new StreamWriter(LocationFile);
-                ser.Serialize(sw, input);
+                ser.Serialize(sw, Locations);
                 sw.Close();
             }
             catch(Exception ex) {
@@ -193,15 +194,33 @@ namespace rpUtility {
             }
         }
 
-        public static void SerializeAlliance(List<Alliance> input) {
+        public static void SerializeAlliance() {
             try {
-                XmlSerializer ser = new XmlSerializer(input.GetType());
+                XmlSerializer ser = new XmlSerializer(Alliances.GetType());
                 StreamWriter sw = new StreamWriter(AllianceFile);
-                ser.Serialize(sw, input);
+                ser.Serialize(sw, Alliances);
                 sw.Close();
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        public static List <NPC> DeserializeBinary() {
+            if (File.Exists(NPCFile)) {
+                using (var file = File.OpenRead(NPCFile)) {
+                    var reader = new BinaryFormatter();
+                    return (List <NPC>) reader.Deserialize(file);
+                }
+            }
+            else
+                return null;
+        }
+
+        public static void SerializeBinary(List <NPC> input) {
+            using (var file = File.OpenWrite(NPCFile)) {
+                var writer = new BinaryFormatter();
+                writer.Serialize(file, NPCs); // Writestheentirelist.
             }
         }
     }

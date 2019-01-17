@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace rpUtility {
-    class Gear {
+    [Serializable]
+    public class Gear {
         private string Name;
         private string Nick;
         private int Value;

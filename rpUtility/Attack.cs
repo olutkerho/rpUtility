@@ -1,6 +1,7 @@
 ﻿using System;
 
 namespace rpUtility {
+    [Serializable]
     public class Attack {
         private string Name;
         private int HitBonus;

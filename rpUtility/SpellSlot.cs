@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace rpUtility {
-    class SpellSlot {
+    [Serializable]
+    public class SpellSlot {
         private int Level;
         private int Amount;
 

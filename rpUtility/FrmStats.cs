@@ -49,6 +49,7 @@ namespace rpUtility
 
             MessageBox.Show("lisätty");
             XML.addNPC(npc);
+            XML.saveLists();
         }
     }
 }

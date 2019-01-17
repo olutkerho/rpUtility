@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace rpUtility {
-
-     public class NPC{
+    [Serializable]
+    public class NPC{
         private string FirstName;
         private string LastName;
         private int Age;
@@ -40,6 +40,8 @@ namespace rpUtility {
             Flaws = new List<string>();
             Perks = new List<string>();
             Stats = new Stats();
+            Relations = new Relations();
+            RoleplayInfo = new RoleplayInfo();
         }
 
         public void setStats(Stats stats) {
