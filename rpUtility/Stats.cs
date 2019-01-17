@@ -30,6 +30,7 @@ namespace rpUtility {
         private int ConstitutionMod;
         private int IntelligenceMod;
         private int WisdomMod;
+        private int CharismaMod;
         private int PassivePerception;
 
         public Stats() {

@@ -17,7 +17,6 @@ namespace rpUtility {
         private string CurseDesc;
 
         public Gear() {
-            
         }
 
         public void setName(string name) {

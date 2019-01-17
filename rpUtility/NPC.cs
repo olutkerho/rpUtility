@@ -25,11 +25,11 @@ namespace rpUtility {
         private List<string> Flaws;
         private List<string> Perks;
         private RoleplayInfo RoleplayInfo;
-        //height
-        //weight
-        //skin color
-        //sex
-        //appearance
+        private int Height; //Height in centimeters
+        private int Weight; //Weight in kilograms
+        private string SkinColour;
+        private string Sex;
+        private string Appearance;
 
 
 
@@ -203,6 +203,66 @@ namespace rpUtility {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        public void setHeight(int height) {
+            Height = height;
+        }
+
+        public int getHeight() {
+            int ret = -1;
+            if (Height != -1) {
+                ret = Height;
+            }
+            return ret;
+        }
+
+        public void setWeight(int weight) {
+            Weight = weight;
+        }
+
+        public int getWeight() {
+            int ret = -1;
+            if (Weight != -1) {
+                ret = Weight;
+            }
+            return ret;
+        }
+
+        public void setAppearance(string appearance) {
+            Appearance = appearance;
+        }
+
+        public string getAppearance() {
+            string ret = "";
+            if (Appearance != null) {
+                ret = Appearance;
+            }
+            return ret;
+        }
+
+        public void setSex(string sex) {
+            Sex = sex;
+        }
+
+        public string getSex() {
+            string ret = "";
+            if (Sex != null) {
+                ret = Sex;
+            }
+            return ret;
+        }
+
+        public void setSkinColour(string skincolour) {
+            SkinColour = skincolour;
+        }
+
+        public string getSkinColour() {
+            string ret = "";
+            if (SkinColour != null) {
+                ret = SkinColour;
+            }
+            return ret;
         }
     }
 }
