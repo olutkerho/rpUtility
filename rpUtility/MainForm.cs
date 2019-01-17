@@ -14,14 +14,13 @@ namespace rpUtility {
     public partial class MainForm : Form {
         public MainForm() {
             InitializeComponent();
-            XML.createLists();
-            XML.readAlliances();
-            XML.readLocations();
-            XML.readNPCs();
+            Binary.createLists();
+            Binary.readAlliances();
+            Binary.readLocations();
+            Binary.readNPCs();
         }
-
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
-            XML.saveLists();
+            Binary.saveLists();
         }
 
         private void btnOpenStats_Click(object sender, EventArgs e)

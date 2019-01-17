@@ -18,3 +18,5 @@ C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.Gen
 C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.CoreCompileInputs.cache
 C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.exe
 C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.pdb
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmStats.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.MainForm.resources

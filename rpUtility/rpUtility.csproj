@@ -74,7 +74,7 @@
     <Compile Include="Spell.cs" />
     <Compile Include="SpellSlot.cs" />
     <Compile Include="Stats.cs" />
-    <Compile Include="XML.cs" />
+    <Compile Include="Binary.cs" />
     <EmbeddedResource Include="FrmStats.resx">
       <DependentUpon>FrmStats.cs</DependentUpon>
     </EmbeddedResource>

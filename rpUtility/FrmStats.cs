@@ -48,8 +48,8 @@ namespace rpUtility
             npc.setStats(stats);
 
             MessageBox.Show("lisätty");
-            XML.addNPC(npc);
-            XML.saveLists();
+            Binary.addNPC(npc);
+            Binary.saveLists();
         }
     }
 }
