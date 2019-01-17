@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.btnOpenStats = new System.Windows.Forms.Button();
+            this.btnEditSkills = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOpenStats
@@ -36,11 +37,22 @@
             this.btnOpenStats.UseVisualStyleBackColor = true;
             this.btnOpenStats.Click += new System.EventHandler(this.btnOpenStats_Click);
             // 
+            // btnEditSkills
+            // 
+            this.btnEditSkills.Location = new System.Drawing.Point(334, 59);
+            this.btnEditSkills.Name = "btnEditSkills";
+            this.btnEditSkills.Size = new System.Drawing.Size(130, 23);
+            this.btnEditSkills.TabIndex = 1;
+            this.btnEditSkills.Text = "edit skills";
+            this.btnEditSkills.UseVisualStyleBackColor = true;
+            this.btnEditSkills.Click += new System.EventHandler(this.btnEditSkills_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEditSkills);
             this.Controls.Add(this.btnOpenStats);
             this.Name = "MainForm";
             this.Text = "Form2";
@@ -52,5 +64,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnOpenStats;
+        private System.Windows.Forms.Button btnEditSkills;
     }
 }

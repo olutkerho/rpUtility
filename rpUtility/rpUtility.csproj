@@ -48,11 +48,23 @@
   <ItemGroup>
     <Compile Include="Alliance.cs" />
     <Compile Include="Attack.cs" />
-    <Compile Include="FrmStats.cs">
+    <Compile Include="FrmAddSkills.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmStats.Designer.cs">
-      <DependentUpon>FrmStats.cs</DependentUpon>
+    <Compile Include="FrmAddSkills.Designer.cs">
+      <DependentUpon>FrmAddSkills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCreateNPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateNPC.Designer.cs">
+      <DependentUpon>FrmCreateNPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNPCSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNPCSkills.Designer.cs">
+      <DependentUpon>FrmNPCSkills.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -75,8 +87,14 @@
     <Compile Include="SpellSlot.cs" />
     <Compile Include="Stats.cs" />
     <Compile Include="Binary.cs" />
-    <EmbeddedResource Include="FrmStats.resx">
-      <DependentUpon>FrmStats.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAddSkills.resx">
+      <DependentUpon>FrmAddSkills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateNPC.resx">
+      <DependentUpon>FrmCreateNPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNPCSkills.resx">
+      <DependentUpon>FrmNPCSkills.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

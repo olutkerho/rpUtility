@@ -1,6 +1,6 @@
 ﻿namespace rpUtility
 {
-    partial class FrmStats
+    partial class FrmCreateNPC
     {
         /// <summary>
         /// Required designer variable.
@@ -58,11 +58,13 @@
             this.tbSex = new System.Windows.Forms.TextBox();
             this.mtbLevel = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCreateNPC = new System.Windows.Forms.Button();
             this.mtbAge = new System.Windows.Forms.MaskedTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.mtbProficiencyBonus = new System.Windows.Forms.MaskedTextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.btnAddTrait = new System.Windows.Forms.Button();
+            this.btnSkills = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -325,15 +327,15 @@
             this.label15.TabIndex = 28;
             this.label15.Text = "Level";
             // 
-            // button1
+            // btnCreateNPC
             // 
-            this.button1.Location = new System.Drawing.Point(822, 519);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Create NPC";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCreateNPC.Location = new System.Drawing.Point(822, 519);
+            this.btnCreateNPC.Name = "btnCreateNPC";
+            this.btnCreateNPC.Size = new System.Drawing.Size(93, 23);
+            this.btnCreateNPC.TabIndex = 17;
+            this.btnCreateNPC.Text = "Create an NPC";
+            this.btnCreateNPC.UseVisualStyleBackColor = true;
+            this.btnCreateNPC.Click += new System.EventHandler(this.btnCreateNPC_Click);
             // 
             // mtbAge
             // 
@@ -371,16 +373,37 @@
             this.label17.TabIndex = 33;
             this.label17.Text = "Proficiency";
             // 
-            // FrmStats
+            // btnAddTrait
+            // 
+            this.btnAddTrait.Location = new System.Drawing.Point(1037, 9);
+            this.btnAddTrait.Name = "btnAddTrait";
+            this.btnAddTrait.Size = new System.Drawing.Size(118, 38);
+            this.btnAddTrait.TabIndex = 34;
+            this.btnAddTrait.Text = "Add a trait";
+            this.btnAddTrait.UseVisualStyleBackColor = true;
+            // 
+            // btnSkills
+            // 
+            this.btnSkills.Location = new System.Drawing.Point(1037, 53);
+            this.btnSkills.Name = "btnSkills";
+            this.btnSkills.Size = new System.Drawing.Size(118, 38);
+            this.btnSkills.TabIndex = 35;
+            this.btnSkills.Text = "Skills";
+            this.btnSkills.UseVisualStyleBackColor = true;
+            this.btnSkills.Click += new System.EventHandler(this.btnSkills_Click);
+            // 
+            // FrmCreateNPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1191, 700);
+            this.Controls.Add(this.btnSkills);
+            this.Controls.Add(this.btnAddTrait);
             this.Controls.Add(this.mtbProficiencyBonus);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.mtbAge);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCreateNPC);
             this.Controls.Add(this.mtbLevel);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.tbSex);
@@ -411,8 +434,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "FrmStats";
-            this.Text = "FrmStats";
+            this.Name = "FrmCreateNPC";
+            this.Text = "Create an NPC";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,10 +473,12 @@
         private System.Windows.Forms.TextBox tbSex;
         private System.Windows.Forms.MaskedTextBox mtbLevel;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCreateNPC;
         private System.Windows.Forms.MaskedTextBox mtbAge;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.MaskedTextBox mtbProficiencyBonus;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnAddTrait;
+        private System.Windows.Forms.Button btnSkills;
     }
 }

@@ -18,6 +18,7 @@ namespace rpUtility {
             Binary.readAlliances();
             Binary.readLocations();
             Binary.readNPCs();
+            Binary.readSkills();
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
             Binary.saveLists();
@@ -25,8 +26,13 @@ namespace rpUtility {
 
         private void btnOpenStats_Click(object sender, EventArgs e)
         {
-            FrmStats frm = new FrmStats();
+            FrmCreateNPC frm = new FrmCreateNPC();
             frm.Show();
+        }
+
+        private void btnEditSkills_Click(object sender, EventArgs e) {
+            FrmAddSkills frm = new FrmAddSkills();
+            frm.ShowDialog();
         }
     }
 }

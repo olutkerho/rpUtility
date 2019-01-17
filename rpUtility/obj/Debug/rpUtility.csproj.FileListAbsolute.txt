@@ -1,7 +1,6 @@
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\bin\Debug\rpUtility.exe.config
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\bin\Debug\rpUtility.exe
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\bin\Debug\rpUtility.pdb
-C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.csprojAssemblyReference.cache
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.Properties.Resources.resources
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.GenerateResource.cache
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.CoreCompileInputs.cache
@@ -18,5 +17,8 @@ C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.Gen
 C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.CoreCompileInputs.cache
 C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.exe
 C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.pdb
-C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmStats.resources
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.MainForm.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.csprojAssemblyReference.cache
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmCreateNPC.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddSkills.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmNPCSkills.resources

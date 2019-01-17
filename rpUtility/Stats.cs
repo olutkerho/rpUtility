@@ -25,7 +25,6 @@ namespace rpUtility {
         private List<Attack> Attacks;
         private List<Skill> Skills;
         private List<SpellSlot> SpellSlots;
-
         private int StrengthMod;
         private int DexterityMod;
         private int ConstitutionMod;
@@ -163,7 +162,7 @@ namespace rpUtility {
             return ret;
         }
 
-        public void setHpCurrent(int hpcurrent) {
+        public void setHpCurrent(int hpcurrent){
             HpCurrent = hpcurrent;
         }
 
@@ -248,7 +247,7 @@ namespace rpUtility {
         }
 
         public void setPassivePerception() {
-            PassivePerception = 10;
+            PassivePerception = 10 + WisdomMod;
             bool skilled = false;
             foreach (Skill s in Skills) {
                 string name = s.getName();

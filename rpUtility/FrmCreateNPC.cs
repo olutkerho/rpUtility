@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace rpUtility
 {
-    public partial class FrmStats : Form
+    public partial class FrmCreateNPC : Form
     {
-        public FrmStats()
+        public FrmCreateNPC()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e) {
+        private void btnCreateNPC_Click(object sender, EventArgs e) {
             NPC npc = new NPC();
             npc.setFirstName(tbFirstName.Text);
             npc.setLastName(tbLastName.Text);
@@ -50,6 +50,11 @@ namespace rpUtility
             MessageBox.Show("lisätty");
             Binary.addNPC(npc);
             Binary.saveLists();
+        }
+
+        private void btnSkills_Click(object sender, EventArgs e) {
+            FrmNPCSkills frm = new FrmNPCSkills();
+            frm.ShowDialog();
         }
     }
 }
