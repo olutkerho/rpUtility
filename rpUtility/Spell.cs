@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace rpUtility {
     [Serializable]
@@ -101,7 +102,7 @@ namespace rpUtility {
                     Components.RemoveAt(Components.IndexOf(component));
                 }
                 catch (Exception ex) {
-                    //Messagebox
+                    MessageBox.Show(ex.Message);
                 }
             }
         }

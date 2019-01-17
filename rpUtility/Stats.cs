@@ -246,6 +246,23 @@ namespace rpUtility {
         public int getCharismaMod(){
             return CharismaMod;
         }
-    }
 
+        public void setPassivePerception() {
+            PassivePerception = 10;
+            bool skilled = false;
+            foreach (Skill s in Skills) {
+                string name = s.getName();
+                if(name == "Perception") {
+                    skilled = true;
+                }
+            }
+            if (skilled) {
+                PassivePerception = PassivePerception + ProficiencyBonus;
+            }
+        }
+
+        public int getPassivePerception() {
+            return PassivePerception;
+        }
+    }
 }
