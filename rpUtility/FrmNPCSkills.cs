@@ -31,8 +31,22 @@ namespace rpUtility {
             }
         }
 
+        private List<Skill> skills = Binary.CloneSkills();
+        private static List<Skill> npcskills = new List<Skill>();
+
+        public static List<Skill> CloneNPCSkills() {
+            List<Skill> skills = new List<Skill>();
+            foreach (Skill s in npcskills) {
+                Skill ss = new Skill();
+                ss.setName(s.getName());
+                ss.setMainSkill(s.getMainSkill());
+                skills.Add(ss);
+            }
+            return skills;
+        }
+
         private void btnSetSkills_Click(object sender, EventArgs e) {
-            List<int> index = new List<int>();
+            npcskills = new List<Skill>();
             CheckBox cb = new CheckBox();
             List<Control> controls = new List<Control>();
             foreach (Control ct in flpSkills.Controls) {
@@ -40,7 +54,8 @@ namespace rpUtility {
                     controls.Add(ct);
                     foreach (CheckBox c in controls) {
                         if (c.Checked) {
-                            index.Add(flpSkills.Controls.IndexOf(ct));
+                            int i = skills.FindIndex(skill => skill.getName() == ct.Tag.ToString());
+                            npcskills.Add(skills[i]);
                         }
                     }
                     controls = new List<Control>();
