@@ -263,5 +263,21 @@ namespace rpUtility {
         public int getPassivePerception() {
             return PassivePerception;
         }
+
+        public void addSkill(Skill skill) {
+            if (skill.getMainSkill() != "" && skill.getName() != "") {
+                Skills.Add(skill);
+            }
+        }
+
+        public static void setSkills(List<Skill> skills) {
+            List<Skill> Skills = new List<Skill>();
+            foreach (Skill s in skills) {
+                Skill ss = new Skill();
+                ss.setName(s.getName());
+                ss.setMainSkill(s.getMainSkill());
+                Skills.Add(ss);
+            }
+        }
     }
 }
