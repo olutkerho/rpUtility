@@ -219,5 +219,17 @@ namespace rpUtility {
             }
             return skills;
         }
+
+        public static List<NPC> getNPCs() {
+            return NPCs;
+        }
+
+        public static NPC findNPC(int id) {
+            NPC ret = null;
+            if (NPCs.Exists(npc => npc.getID() == id)) {
+                ret = NPCs[NPCs.FindIndex(npc => npc.getID() == id)];
+            }
+            return ret;
+        }
     }
 }
