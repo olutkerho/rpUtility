@@ -270,7 +270,7 @@ namespace rpUtility {
             }
         }
 
-        public static void setSkills(List<Skill> skills) {
+        public void setSkills(List<Skill> skills) {
             List<Skill> Skills = new List<Skill>();
             foreach (Skill s in skills) {
                 Skill ss = new Skill();
@@ -278,6 +278,32 @@ namespace rpUtility {
                 ss.setMainSkill(s.getMainSkill());
                 Skills.Add(ss);
             }
+            this.Skills = Skills;
+        }
+
+        public void addAttack(Attack att)
+        {
+            if (att.getName() != "")
+            {
+                Attacks.Add(att);
+            }
+        }
+
+        public void setAttacks(List<Attack> attacks)
+        {
+            List<Attack> Attacks = new List<Attack>();
+            foreach (Attack s in Attacks)
+            {
+                Attack att = new Attack();
+                att.setName(s.getName());
+                att.setHitBonus(s.getHitBonus());
+                att.setDamage(s.getDamage());
+                att.setDamageType(s.getDamageType());
+                att.setRange(s.getRange());
+                Attacks.Add(att);
+            }
+
+            this.Attacks = Attacks;
         }
     }
 }
