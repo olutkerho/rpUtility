@@ -22,3 +22,16 @@ C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.cs
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmCreateNPC.resources
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddSkills.resources
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmNPCSkills.resources
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\bin\Debug\rpUtility.exe.config
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\bin\Debug\rpUtility.exe
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\bin\Debug\rpUtility.pdb
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.csprojAssemblyReference.cache
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddSkills.resources
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmCreateNPC.resources
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmNPCSkills.resources
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.MainForm.resources
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.Properties.Resources.resources
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.GenerateResource.cache
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.CoreCompileInputs.cache
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.exe
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.pdb

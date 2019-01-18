@@ -15,6 +15,7 @@ namespace rpUtility {
             RefreshSkills();
         }
 
+        List<Skill> skills;
         private void btnAddSkill_Click(object sender, EventArgs e) {
             Skill skill = new Skill();
             skill.setName(tbName.Text);
@@ -25,7 +26,7 @@ namespace rpUtility {
         }
 
         private void RefreshSkills() {
-            List<Skill> skills = Binary.CloneSkills();
+            skills = Binary.CloneSkills();
             flpSkills.Controls.Clear();
             foreach (Skill s in skills) {
                 Label lb = new Label();
@@ -41,6 +42,7 @@ namespace rpUtility {
                 cb.Margin = new Padding(0, 3, 0, 3);
                 cb.TextAlign = ContentAlignment.TopLeft;
                 cb.ForeColor = Color.Black;
+                cb.Tag = s.getName();
                 flpSkills.Controls.Add(cb);
             }
         }
@@ -61,20 +63,11 @@ namespace rpUtility {
                     controls.Add(ct);
                     foreach (CheckBox c in controls) {
                         if (c.Checked) {
-                            index.Add(flpSkills.Controls.IndexOf(ct));
+                            int i = skills.FindIndex(skill => skill.getName() == ct.Tag.ToString());
+                            Binary.removeSkill(i);
                         }
                     }
                     controls = new List<Control>();
-                }
-            }
-            index.Sort();
-            index.Reverse();
-            foreach (int i in index) {
-                if (i == 0) {
-                    Binary.removeSkill(i);
-                }
-                else {
-                    Binary.removeSkill(i / 2);
                 }
             }
             RefreshSkills();
