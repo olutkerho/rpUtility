@@ -15,6 +15,12 @@ namespace rpUtility
         public FrmCreateNPC()
         {
             InitializeComponent();
+            RefreshAttacksList();
+        }
+
+        private void RefreshAttacksList()
+        {
+            throw new NotImplementedException();
         }
 
         private void btnCreateNPC_Click(object sender, EventArgs e) {
@@ -55,6 +61,12 @@ namespace rpUtility
         private void btnSkills_Click(object sender, EventArgs e) {
             FrmNPCSkills frm = new FrmNPCSkills();
             frm.ShowDialog();
+        }
+
+        private void btnAddAttack_Click(object sender, EventArgs e)
+        {
+            FrmAddAttack f = new FrmAddAttack();
+            f.ShowDialog();
         }
     }
 }

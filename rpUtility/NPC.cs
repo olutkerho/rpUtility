@@ -33,7 +33,6 @@ namespace rpUtility {
         private string Race;
 
 
-
         public NPC(){
             GearList = new List<Gear>();
             Secrets = new List<string>();

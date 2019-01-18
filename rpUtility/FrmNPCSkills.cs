@@ -30,22 +30,5 @@ namespace rpUtility {
                 flpSkills.Controls.Add(cb);
             }
         }
-
-        private void btnSetSkills_Click(object sender, EventArgs e) {
-            List<int> index = new List<int>();
-            CheckBox cb = new CheckBox();
-            List<Control> controls = new List<Control>();
-            foreach (Control ct in flpSkills.Controls) {
-                if (ct.GetType() == cb.GetType()) {
-                    controls.Add(ct);
-                    foreach (CheckBox c in controls) {
-                        if (c.Checked) {
-                            index.Add(flpSkills.Controls.IndexOf(ct));
-                        }
-                    }
-                    controls = new List<Control>();
-                }
-            }
-        }
     }
 }

@@ -65,6 +65,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.btnAddTrait = new System.Windows.Forms.Button();
             this.btnSkills = new System.Windows.Forms.Button();
+            this.flpAttacksAndSpellCasting = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAddAttack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -392,11 +394,30 @@
             this.btnSkills.UseVisualStyleBackColor = true;
             this.btnSkills.Click += new System.EventHandler(this.btnSkills_Click);
             // 
+            // flpAttacksAndSpellCasting
+            // 
+            this.flpAttacksAndSpellCasting.Location = new System.Drawing.Point(353, 239);
+            this.flpAttacksAndSpellCasting.Name = "flpAttacksAndSpellCasting";
+            this.flpAttacksAndSpellCasting.Size = new System.Drawing.Size(309, 264);
+            this.flpAttacksAndSpellCasting.TabIndex = 36;
+            // 
+            // btnAddAttack
+            // 
+            this.btnAddAttack.Location = new System.Drawing.Point(542, 509);
+            this.btnAddAttack.Name = "btnAddAttack";
+            this.btnAddAttack.Size = new System.Drawing.Size(120, 23);
+            this.btnAddAttack.TabIndex = 37;
+            this.btnAddAttack.Text = "Add New Attack";
+            this.btnAddAttack.UseVisualStyleBackColor = true;
+            this.btnAddAttack.Click += new System.EventHandler(this.btnAddAttack_Click);
+            // 
             // FrmCreateNPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1191, 700);
+            this.Controls.Add(this.btnAddAttack);
+            this.Controls.Add(this.flpAttacksAndSpellCasting);
             this.Controls.Add(this.btnSkills);
             this.Controls.Add(this.btnAddTrait);
             this.Controls.Add(this.mtbProficiencyBonus);
@@ -480,5 +501,7 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnAddTrait;
         private System.Windows.Forms.Button btnSkills;
+        private System.Windows.Forms.FlowLayoutPanel flpAttacksAndSpellCasting;
+        private System.Windows.Forms.Button btnAddAttack;
     }
 }

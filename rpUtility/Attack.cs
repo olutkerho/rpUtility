@@ -7,7 +7,7 @@ namespace rpUtility {
         private int HitBonus;
         private string Damage;
         private string DamageType;
-        private string Range;
+        private int Range;
 
         public Attack() {
         }
@@ -56,13 +56,13 @@ namespace rpUtility {
             return ret;
         }
 
-        public void setRange(string range) {
+        public void setRange(int range) {
             Range = range;
         }
 
-        public string getRange() {
-            string ret = "";
-            if (Range != null) {
+        public int getRange() {
+            int ret = 0;
+            if (Range > 0) {
                 ret = Range;
             }
             return ret;

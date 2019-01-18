@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Alliance.cs" />
     <Compile Include="Attack.cs" />
+    <Compile Include="FrmAddAttack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddAttack.Designer.cs">
+      <DependentUpon>FrmAddAttack.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddSkills.cs">
       <SubType>Form</SubType>
     </Compile>
