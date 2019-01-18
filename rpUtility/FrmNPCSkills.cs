@@ -30,5 +30,37 @@ namespace rpUtility {
                 flpSkills.Controls.Add(cb);
             }
         }
+
+        private List<Skill> skills = Binary.CloneSkills();
+        private static List<Skill> npcskills = new List<Skill>();
+
+        public static List<Skill> CloneNPCSkills() {
+            List<Skill> skills = new List<Skill>();
+            foreach (Skill s in npcskills) {
+                Skill ss = new Skill();
+                ss.setName(s.getName());
+                ss.setMainSkill(s.getMainSkill());
+                skills.Add(ss);
+            }
+            return skills;
+        }
+
+        private void btnSetSkills_Click(object sender, EventArgs e) {
+            npcskills = new List<Skill>();
+            CheckBox cb = new CheckBox();
+            List<Control> controls = new List<Control>();
+            foreach (Control ct in flpSkills.Controls) {
+                if (ct.GetType() == cb.GetType()) {
+                    controls.Add(ct);
+                    foreach (CheckBox c in controls) {
+                        if (c.Checked) {
+                            int i = skills.FindIndex(skill => skill.getName() == ct.Tag.ToString());
+                            npcskills.Add(skills[i]);
+                        }
+                    }
+                    controls = new List<Control>();
+                }
+            }
+        }
     }
 }
