@@ -12,8 +12,8 @@ namespace rpUtility {
     public partial class FrmNPCSkills : Form {
         public FrmNPCSkills() {
             InitializeComponent();
-            List<Skill> skills = Binary.CloneSkills();
-            foreach (Skill s in skills) {
+            Skills = Binary.CloneSkills();
+            foreach (Skill s in Skills) {
                 Label lb = new Label();
                 lb.Size = new Size(150, 15);
                 lb.Margin = new Padding(0, 3, 0, 3);
@@ -27,16 +27,22 @@ namespace rpUtility {
                 cb.Margin = new Padding(0, 3, 0, 3);
                 cb.TextAlign = ContentAlignment.TopLeft;
                 cb.ForeColor = Color.Black;
+                cb.Tag = lb.Text;
+                foreach (Skill skill in NPCSkills) {
+                    if (skill.getName() == cb.Tag.ToString()) {
+                        cb.Checked = true;
+                    }
+                }
                 flpSkills.Controls.Add(cb);
             }
         }
 
-        private List<Skill> skills = Binary.CloneSkills();
-        private static List<Skill> npcskills = new List<Skill>();
+        private List<Skill> Skills;
+        private static List<Skill> NPCSkills = new List<Skill>();
 
-        public static List<Skill> CloneNPCSkills() {
+        public static List<Skill> getNPCSkills() {
             List<Skill> skills = new List<Skill>();
-            foreach (Skill s in npcskills) {
+            foreach (Skill s in NPCSkills) {
                 Skill ss = new Skill();
                 ss.setName(s.getName());
                 ss.setMainSkill(s.getMainSkill());
@@ -45,8 +51,17 @@ namespace rpUtility {
             return skills;
         }
 
+        public static void setNPCSkills(List<Skill> npcskills) {
+            NPCSkills = new List<Skill>();
+            foreach (Skill skill in npcskills) {
+                Skill s = new Skill();
+                s.setMainSkill(skill.getMainSkill());
+                s.setName(skill.getName());
+            }
+        }
+
         private void btnSetSkills_Click(object sender, EventArgs e) {
-            npcskills = new List<Skill>();
+            NPCSkills = new List<Skill>();
             CheckBox cb = new CheckBox();
             List<Control> controls = new List<Control>();
             foreach (Control ct in flpSkills.Controls) {
@@ -54,8 +69,8 @@ namespace rpUtility {
                     controls.Add(ct);
                     foreach (CheckBox c in controls) {
                         if (c.Checked) {
-                            int i = skills.FindIndex(skill => skill.getName() == ct.Tag.ToString());
-                            npcskills.Add(skills[i]);
+                            int i = Skills.FindIndex(skill => skill.getName() == ct.Tag.ToString());
+                            NPCSkills.Add(Skills[i]);
                         }
                     }
                     controls = new List<Control>();
