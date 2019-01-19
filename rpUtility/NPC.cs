@@ -31,6 +31,7 @@ namespace rpUtility {
         private string Sex;
         private string Appearance;
         private string Race;
+        private int ID;
 
 
         public NPC(){
@@ -41,6 +42,25 @@ namespace rpUtility {
             Stats = new Stats();
             Relations = new Relations();
             RoleplayInfo = new RoleplayInfo();
+            setID(Binary.getNPCs());
+        }
+
+        private void setID(List<NPC> npcs) {
+            Random rnd = new Random();
+            bool pass;
+            do {
+                pass = true;
+                ID = rnd.Next(0, 100000);
+                foreach (NPC npc in npcs) {
+                    if (npc.ID == ID) {
+                        pass = false;
+                    }
+                }
+            } while (!pass);
+        }
+
+        public int getID() {
+            return ID;
         }
 
         public void setStats(Stats stats) {
@@ -290,6 +310,14 @@ namespace rpUtility {
                 ret = SkinColour;
             }
             return ret;
+        }
+
+        public void setRoleplayInfo(RoleplayInfo rp) {
+            RoleplayInfo = new RoleplayInfo();
+            RoleplayInfo.setAccent(rp.getAccent());
+            RoleplayInfo.setGestures(rp.getGestures());
+            RoleplayInfo.setTalkSpeed(rp.getTalkSpeed());
+            RoleplayInfo.setVoiceType(rp.getVoiceType());
         }
     }
 }

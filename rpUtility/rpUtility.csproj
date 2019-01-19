@@ -54,6 +54,12 @@
     <Compile Include="FrmAddAttack.Designer.cs">
       <DependentUpon>FrmAddAttack.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddRoleplayInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddRoleplayInfo.Designer.cs">
+      <DependentUpon>FrmAddRoleplayInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddSkills.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,8 +99,8 @@
     <Compile Include="SpellSlot.cs" />
     <Compile Include="Stats.cs" />
     <Compile Include="Binary.cs" />
-    <EmbeddedResource Include="FrmAddAttack.resx">
-      <DependentUpon>FrmAddAttack.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAddRoleplayInfo.resx">
+      <DependentUpon>FrmAddRoleplayInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddSkills.resx">
       <DependentUpon>FrmAddSkills.cs</DependentUpon>
