@@ -20,7 +20,6 @@ namespace rpUtility
 
         private void RefreshAttacksList()
         {
-            throw new NotImplementedException();
         }
 
         private void btnCreateNPC_Click(object sender, EventArgs e) {

@@ -20,6 +20,7 @@ namespace rpUtility {
             Binary.readNPCs();
             Binary.readSkills();
             Binary.findNPC(0);
+            Binary.setMainSkills();//Placeholder!!!
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
             Binary.saveLists();

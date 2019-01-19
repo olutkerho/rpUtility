@@ -13,19 +13,41 @@ namespace rpUtility {
         public FrmAddSkills() {
             InitializeComponent();
             RefreshSkills();
+            cmbMainSkill.DataSource = Binary.MainSkills;
         }
 
         List<Skill> skills;
+
         private void btnAddSkill_Click(object sender, EventArgs e) {
-            Skill skill = new Skill();
-            skill.setName(tbName.Text);
-            skill.setMainSkill(tbMainSkill.Text);
-            Binary.addSkill(skill);
-            Binary.saveLists();
-            RefreshSkills();
+            if (tbName.Text != "" && Binary.MainSkills.Contains(cmbMainSkill.Text)) {
+                bool pass = true;
+                foreach (Skill s in skills) {
+                    if (s.getName().ToLower() == tbName.Text.ToLower()) {
+                        pass = false;
+                    }
+                }
+                if (pass) {
+                    Skill skill = new Skill();
+                    skill.setName(tbName.Text);
+                    skill.setMainSkill(cmbMainSkill.Text);
+                    Binary.addSkill(skill);
+                    Binary.saveLists();
+                    tbName.Select();
+                    tbName.Clear();
+                    RefreshSkills();
+                }
+                else {
+                    MessageBox.Show("Skill on jo olemassa");
+                }
+
+            }
+            else {
+                MessageBox.Show("Et saa jättää tyhjää kenttää, sekä MainSkill täytyy olla listasta.");
+            }
         }
 
         private void RefreshSkills() {
+            Binary.sortSkills();
             skills = Binary.CloneSkills();
             flpSkills.Controls.Clear();
             foreach (Skill s in skills) {
@@ -34,7 +56,7 @@ namespace rpUtility {
                 lb.Margin = new Padding(0, 3, 0, 3);
                 lb.TextAlign = ContentAlignment.TopLeft;
                 lb.ForeColor = Color.Black;
-                lb.Text = s.getName();
+                lb.Text = s.getName() + ", " + s.getMainSkill();
                 flpSkills.Controls.Add(lb);
 
                 CheckBox cb = new CheckBox();
@@ -50,7 +72,7 @@ namespace rpUtility {
         private void tbMainSkill_KeyDown(object sender, KeyEventArgs e) {
             if (e.KeyData == Keys.Enter) {
                 e.Handled = true;
-                btnAddSkill_Click(tbMainSkill, e);
+                btnAddSkill_Click(cmbMainSkill, e);
             }
         }
 
@@ -64,6 +86,7 @@ namespace rpUtility {
                         if (c.Checked) {
                             int i = skills.FindIndex(skill => skill.getName() == ct.Tag.ToString());
                             Binary.removeSkill(i);
+                            skills = Binary.CloneSkills();
                         }
                     }
                     controls = new List<Control>();

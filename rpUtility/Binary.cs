@@ -18,6 +18,18 @@ namespace rpUtility {
         private static List<Location> Locations;
         private static List<Skill> Skills;
 
+        public static List<string> MainSkills;
+        
+        //Placeholder!!!!
+        public static void setMainSkills() {
+            MainSkills = new List<string>();
+            MainSkills.Add("Strength");
+            MainSkills.Add("Dexterity");
+            MainSkills.Add("Intelligence");
+            MainSkills.Add("Wisdom");
+            MainSkills.Add("Charisma");
+        }
+
         public static void saveLists() {
             SerializeAlliance(Alliances);
             SerializeLocation(Locations);
@@ -203,6 +215,7 @@ namespace rpUtility {
         }
 
         public static void SerializeSkill(List<Skill> input) {
+            sortSkills();
             using (var file = System.IO.File.OpenWrite(SkillFile)) {
                 var writer = new BinaryFormatter();
                 writer.Serialize(file, Skills);
@@ -230,6 +243,18 @@ namespace rpUtility {
                 ret = NPCs[NPCs.FindIndex(npc => npc.getID() == id)];
             }
             return ret;
+        }
+
+        public static void sortSkills() {
+            List<Skill> skills = Skills.OrderBy(skill => skill.getName()).ToList();
+            Skills = new List<Skill>();
+            foreach (string ss in MainSkills) {
+                foreach (Skill s in skills) {
+                    if (ss == s.getMainSkill()) {
+                        Skills.Add(s);
+                    }
+                }
+            }
         }
     }
 }
