@@ -321,5 +321,21 @@ namespace rpUtility {
             }
             return ret;
         }
+
+        public void setSpells(List<Spell> spells) {
+            Spells = new List<Spell>();
+            foreach (Spell s in spells) {
+                Spell ss = new Spell();
+                ss.setCastTime(s.getCastTime());
+                ss.setDamage(s.getDamage());
+                ss.setDuration(s.getDuration());
+                ss.setLevel(s.getLevel());
+                ss.setRange(s.getRange());
+                ss.setSchool(s.getSchool());
+                ss.setName(s.getName());
+                Spells.Add(ss);
+            }
+            
+        }
     }
 }

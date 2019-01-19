@@ -12,18 +12,19 @@ namespace rpUtility
 {
     public partial class FrmCreateNPC : Form
     {
-        public FrmCreateNPC()
-        {
+        public FrmCreateNPC() {
             InitializeComponent();
             AtkList = new List<Attack>();
             RefreshAttacksList();
             NPC = new NPC();
             Stats = new Stats();
+            Spells = new List<Spell>();
         }
 
         NPC NPC;
         List<Attack> AtkList;
         Stats Stats;
+        List<Spell> Spells;
 
         private void RefreshAttacksList()
         {

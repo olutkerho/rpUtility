@@ -44,6 +44,9 @@
             this.flpSpells = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.lbMaterial = new System.Windows.Forms.Label();
+            this.tbMaterials = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -60,14 +63,14 @@
             this.tbName.Location = new System.Drawing.Point(99, 10);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(173, 20);
-            this.tbName.TabIndex = 1;
+            this.tbName.TabIndex = 0;
             // 
             // tbSchool
             // 
             this.tbSchool.Location = new System.Drawing.Point(99, 43);
             this.tbSchool.Name = "tbSchool";
             this.tbSchool.Size = new System.Drawing.Size(173, 20);
-            this.tbSchool.TabIndex = 3;
+            this.tbSchool.TabIndex = 1;
             // 
             // label2
             // 
@@ -83,7 +86,7 @@
             this.tbDamage.Location = new System.Drawing.Point(99, 109);
             this.tbDamage.Name = "tbDamage";
             this.tbDamage.Size = new System.Drawing.Size(173, 20);
-            this.tbDamage.TabIndex = 7;
+            this.tbDamage.TabIndex = 3;
             // 
             // label3
             // 
@@ -99,7 +102,7 @@
             this.tbLevel.Location = new System.Drawing.Point(99, 76);
             this.tbLevel.Name = "tbLevel";
             this.tbLevel.Size = new System.Drawing.Size(173, 20);
-            this.tbLevel.TabIndex = 5;
+            this.tbLevel.TabIndex = 2;
             // 
             // label4
             // 
@@ -115,7 +118,7 @@
             this.tbRange.Location = new System.Drawing.Point(99, 208);
             this.tbRange.Name = "tbRange";
             this.tbRange.Size = new System.Drawing.Size(173, 20);
-            this.tbRange.TabIndex = 13;
+            this.tbRange.TabIndex = 6;
             // 
             // label5
             // 
@@ -131,7 +134,7 @@
             this.tbDuration.Location = new System.Drawing.Point(99, 175);
             this.tbDuration.Name = "tbDuration";
             this.tbDuration.Size = new System.Drawing.Size(173, 20);
-            this.tbDuration.TabIndex = 11;
+            this.tbDuration.TabIndex = 5;
             // 
             // label6
             // 
@@ -147,7 +150,7 @@
             this.tbCastTime.Location = new System.Drawing.Point(99, 142);
             this.tbCastTime.Name = "tbCastTime";
             this.tbCastTime.Size = new System.Drawing.Size(173, 20);
-            this.tbCastTime.TabIndex = 9;
+            this.tbCastTime.TabIndex = 4;
             // 
             // label7
             // 
@@ -173,9 +176,10 @@
             this.cbVerbal.Location = new System.Drawing.Point(99, 240);
             this.cbVerbal.Name = "cbVerbal";
             this.cbVerbal.Size = new System.Drawing.Size(56, 17);
-            this.cbVerbal.TabIndex = 18;
+            this.cbVerbal.TabIndex = 7;
             this.cbVerbal.Text = "Verbal";
             this.cbVerbal.UseVisualStyleBackColor = true;
+            this.cbVerbal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cb_KeyDown);
             // 
             // cbSomatic
             // 
@@ -183,9 +187,10 @@
             this.cbSomatic.Location = new System.Drawing.Point(99, 263);
             this.cbSomatic.Name = "cbSomatic";
             this.cbSomatic.Size = new System.Drawing.Size(64, 17);
-            this.cbSomatic.TabIndex = 19;
+            this.cbSomatic.TabIndex = 8;
             this.cbSomatic.Text = "Somatic";
             this.cbSomatic.UseVisualStyleBackColor = true;
+            this.cbSomatic.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cb_KeyDown);
             // 
             // cbMaterial
             // 
@@ -193,9 +198,11 @@
             this.cbMaterial.Location = new System.Drawing.Point(99, 286);
             this.cbMaterial.Name = "cbMaterial";
             this.cbMaterial.Size = new System.Drawing.Size(63, 17);
-            this.cbMaterial.TabIndex = 20;
+            this.cbMaterial.TabIndex = 9;
             this.cbMaterial.Text = "Material";
             this.cbMaterial.UseVisualStyleBackColor = true;
+            this.cbMaterial.CheckedChanged += new System.EventHandler(this.cbMaterial_CheckedChanged);
+            this.cbMaterial.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cb_KeyDown);
             // 
             // flpSpells
             // 
@@ -206,28 +213,58 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(8, 328);
+            this.btnAdd.Location = new System.Drawing.Point(12, 348);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(90, 90);
-            this.btnAdd.TabIndex = 22;
+            this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Add spell";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(152, 328);
+            this.btnRemove.Location = new System.Drawing.Point(152, 348);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(120, 90);
-            this.btnRemove.TabIndex = 23;
+            this.btnRemove.TabIndex = 12;
             this.btnRemove.Text = "Remove selected";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // lbMaterial
+            // 
+            this.lbMaterial.AutoSize = true;
+            this.lbMaterial.Location = new System.Drawing.Point(13, 316);
+            this.lbMaterial.Name = "lbMaterial";
+            this.lbMaterial.Size = new System.Drawing.Size(49, 13);
+            this.lbMaterial.TabIndex = 24;
+            this.lbMaterial.Text = "Materials";
+            // 
+            // tbMaterials
+            // 
+            this.tbMaterials.Location = new System.Drawing.Point(99, 313);
+            this.tbMaterials.Name = "tbMaterials";
+            this.tbMaterials.Size = new System.Drawing.Size(173, 20);
+            this.tbMaterials.TabIndex = 10;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(307, 415);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 13;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // FrmAddSpells
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 450);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.tbMaterials);
+            this.Controls.Add(this.lbMaterial);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.flpSpells);
@@ -251,6 +288,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAddSpells";
             this.Text = "FrmAddSpells";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAddSpells_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +317,8 @@
         private System.Windows.Forms.FlowLayoutPanel flpSpells;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.Label lbMaterial;
+        private System.Windows.Forms.TextBox tbMaterials;
+        private System.Windows.Forms.Button btnClear;
     }
 }

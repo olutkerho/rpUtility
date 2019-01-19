@@ -12,6 +12,7 @@ namespace rpUtility {
         private int Level;
         private string School;
         private List<string> Components;
+        private string Material;
         private string CastTime;
         private string Range;
         private string Duration;
@@ -19,6 +20,18 @@ namespace rpUtility {
 
         public Spell() {
             Components = new List<string>();
+        }
+
+        public void setMaterial(string material) {
+            Material = material;
+        }
+
+        public string getMaterial() {
+            string ret = "";
+            if (Material != null) {
+                ret = Material;
+            }
+            return ret;
         }
 
         public void setName(string name) {
@@ -118,6 +131,16 @@ namespace rpUtility {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        public List<string> getComponents() {
+            List<string> ret = new List<string>();
+            foreach (string s in Components) {
+                if (s != "" && s != null) {
+                    ret.Add(s);
+                }
+            }
+            return ret;
         }
     }
 
