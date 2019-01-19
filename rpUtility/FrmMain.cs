@@ -11,16 +11,17 @@ using System.IO;
 using System.Xml;
 
 namespace rpUtility {
-    public partial class MainForm : Form {
-        public MainForm() {
+    public partial class FrmMain : Form {
+        public FrmMain() {
             InitializeComponent();
             Binary.createLists();
             Binary.readAlliances();
             Binary.readLocations();
             Binary.readNPCs();
             Binary.readSkills();
+            Binary.readMainSkills();
             Binary.findNPC(0);
-            Binary.setMainSkills();//Placeholder!!!
+            //Binary.setMainSkills();//Placeholder!!!
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
             Binary.saveLists();

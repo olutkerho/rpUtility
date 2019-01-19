@@ -1,5 +1,5 @@
 ﻿namespace rpUtility {
-    partial class MainForm {
+    partial class FrmMain {
         /// <summary>
         /// Required designer variable.
         /// </summary>

@@ -17,8 +17,10 @@ namespace rpUtility
             InitializeComponent();
             AtkList = new List<Attack>();
             RefreshAttacksList();
+            npc = new NPC();
         }
 
+        NPC npc;
         List<Attack> AtkList;
 
         private void RefreshAttacksList()
@@ -48,40 +50,46 @@ namespace rpUtility
             }
         }
 
-        private void btnCreateNPC_Click(object sender, EventArgs e) {
-            NPC npc = new NPC();
+        private void btnCreateNPC_Click(object sender, EventArgs e) { 
             npc.setFirstName(tbFirstName.Text);
-            npc.setLastName(tbLastName.Text);
-            npc.setAge(int.Parse(mtbAge.Text));
-            npc.setRace(tbRace.Text);
-            npc.setAlignment(tbAlignment.Text);
-            npc.setSex(tbSex.Text);
-            npc.setLevel(int.Parse(mtbLevel.Text));
-            Stats stats = new Stats();
-            stats.setStrength(int.Parse(mtbSrength.Text));
-            stats.setDexterity(int.Parse(mtbDexterity.Text));
-            stats.setConstitution(int.Parse(mtbConstitution.Text));
-            stats.setIntelligence(int.Parse(mtbIntelligence.Text));
-            stats.setWisdom(int.Parse(mtbWisdom.Text));
-            stats.setCharisma(int.Parse(mtbCharisma.Text));
-            stats.setArmorClass(int.Parse(mtbArmorClass.Text));
-            stats.setSpeed(int.Parse(mtbSpeed.Text));
-            stats.setHpMax(int.Parse(mtbHpMax.Text));
-            stats.setHpCurrent(stats.getHpMax());
-            stats.setHpTemp(0);
-            stats.setProficiencyBonus(int.Parse(mtbProficiencyBonus.Text));
-            stats.setStrengthMod();
-            stats.setDexterityMod();
-            stats.setConstitutionMod();
-            stats.setIntelligenceMod();
-            stats.setWisdomMod();
-            stats.setCharismaMod();
-            stats.setAttacks(AtkList);
-            npc.setStats(stats);
+            if (npc.getFirstName() != "") {
+                npc.setLastName(tbLastName.Text);
+                npc.setAge(int.Parse(mtbAge.Text));
+                npc.setRace(tbRace.Text);
+                npc.setAlignment(tbAlignment.Text);
+                npc.setSex(tbSex.Text);
+                npc.setLevel(int.Parse(mtbLevel.Text));
+                Stats stats = new Stats();
+                stats.setStrength(int.Parse(mtbSrength.Text));
+                stats.setDexterity(int.Parse(mtbDexterity.Text));
+                stats.setConstitution(int.Parse(mtbConstitution.Text));
+                stats.setIntelligence(int.Parse(mtbIntelligence.Text));
+                stats.setWisdom(int.Parse(mtbWisdom.Text));
+                stats.setCharisma(int.Parse(mtbCharisma.Text));
+                stats.setArmorClass(int.Parse(mtbArmorClass.Text));
+                stats.setSpeed(int.Parse(mtbSpeed.Text));
+                stats.setHpMax(int.Parse(mtbHpMax.Text));
+                stats.setHpCurrent(stats.getHpMax());
+                stats.setHpTemp(0);
+                stats.setProficiencyBonus(int.Parse(mtbProficiencyBonus.Text));
+                stats.setStrengthMod();
+                stats.setDexterityMod();
+                stats.setConstitutionMod();
+                stats.setIntelligenceMod();
+                stats.setWisdomMod();
+                stats.setCharismaMod();
+                stats.setAttacks(AtkList);
+                List<Skill> Skills = FrmNPCSkills.getNPCSkills();
+                stats.setSkills(Skills);
+                npc.setStats(stats);
 
-            MessageBox.Show("lisätty");
-            Binary.addNPC(npc);
-            Binary.saveLists();
+                MessageBox.Show("lisätty");
+                Binary.addNPC(npc);
+                Binary.saveLists();
+            }
+            else {
+                MessageBox.Show("You cannot create an npc without a first name.");
+            }
         }
 
         private void btnSkills_Click(object sender, EventArgs e) {
@@ -118,6 +126,30 @@ namespace rpUtility
             FrmAddAttack f = new FrmAddAttack(AtkList, false, btn.Tag.ToString());
             f.ShowDialog();
             RefreshAttacksList();
+        }
+
+        private void clearForm() {
+            tbAlignment.Clear();
+            tbFirstName.Clear();
+            tbLastName.Clear();
+            tbRace.Clear();
+            tbSex.Clear();
+            mtbAge.Clear();
+            mtbArmorClass.Clear();
+            mtbCharisma.Clear();
+            mtbConstitution.Clear();
+            mtbDexterity.Clear();
+            mtbHpMax.Clear();
+            mtbIntelligence.Clear();
+            mtbLevel.Clear();
+            mtbProficiencyBonus.Clear();
+            mtbSpeed.Clear();
+            mtbSrength.Clear();
+            mtbWisdom.Clear();
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e) {
+            clearForm();
         }
     }
 }

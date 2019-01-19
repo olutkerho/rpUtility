@@ -30,6 +30,7 @@
             this.btnDeleteSkills = new System.Windows.Forms.Button();
             this.flpSkills = new System.Windows.Forms.FlowLayoutPanel();
             this.cmbMainSkill = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -47,6 +48,7 @@
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(144, 20);
             this.tbName.TabIndex = 0;
+            this.tbName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbName_KeyDown);
             // 
             // label2
             // 
@@ -93,11 +95,22 @@
             this.cmbMainSkill.Size = new System.Drawing.Size(144, 21);
             this.cmbMainSkill.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(15, 280);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(214, 94);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Edit attributes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmAddSkills
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 514);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbMainSkill);
             this.Controls.Add(this.flpSkills);
             this.Controls.Add(this.btnDeleteSkills);
@@ -107,6 +120,8 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmAddSkills";
             this.Text = "AddSkills";
+            this.Activated += new System.EventHandler(this.FrmAddSkills_Activated);
+            this.Enter += new System.EventHandler(this.FrmAddSkills_Enter);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +136,6 @@
         private System.Windows.Forms.Button btnDeleteSkills;
         private System.Windows.Forms.FlowLayoutPanel flpSkills;
         private System.Windows.Forms.ComboBox cmbMainSkill;
+        private System.Windows.Forms.Button button1;
     }
 }

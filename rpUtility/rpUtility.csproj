@@ -54,6 +54,12 @@
     <Compile Include="FrmAddAttack.Designer.cs">
       <DependentUpon>FrmAddAttack.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddMainSkill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddMainSkill.Designer.cs">
+      <DependentUpon>FrmAddMainSkill.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddRoleplayInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,17 +78,23 @@
     <Compile Include="FrmCreateNPC.Designer.cs">
       <DependentUpon>FrmCreateNPC.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCreateNPCPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCreateNPCPrompt.Designer.cs">
+      <DependentUpon>FrmCreateNPCPrompt.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNPCSkills.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmNPCSkills.Designer.cs">
       <DependentUpon>FrmNPCSkills.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Gear.cs" />
     <Compile Include="Location.cs" />
@@ -102,6 +114,9 @@
     <EmbeddedResource Include="FrmAddAttack.resx">
       <DependentUpon>FrmAddAttack.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddMainSkill.resx">
+      <DependentUpon>FrmAddMainSkill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddRoleplayInfo.resx">
       <DependentUpon>FrmAddRoleplayInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,11 +126,14 @@
     <EmbeddedResource Include="FrmCreateNPC.resx">
       <DependentUpon>FrmCreateNPC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCreateNPCPrompt.resx">
+      <DependentUpon>FrmCreateNPCPrompt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNPCSkills.resx">
       <DependentUpon>FrmNPCSkills.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

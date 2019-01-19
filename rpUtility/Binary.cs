@@ -13,28 +13,19 @@ namespace rpUtility {
         private static string LocationFile = Directory.GetCurrentDirectory() + "\\Locations.dat";
         private static string AllianceFile = Directory.GetCurrentDirectory() + "\\Alliances.dat";
         private static string SkillFile = Directory.GetCurrentDirectory() + "\\Skills.dat";
+        private static string MainSkillFile = Directory.GetCurrentDirectory() + "\\MainSkills.dat";
         private static List<Alliance> Alliances;
         private static List<NPC> NPCs;
         private static List<Location> Locations;
         private static List<Skill> Skills;
-
-        public static List<string> MainSkills;
-        
-        //Placeholder!!!!
-        public static void setMainSkills() {
-            MainSkills = new List<string>();
-            MainSkills.Add("Strength");
-            MainSkills.Add("Dexterity");
-            MainSkills.Add("Intelligence");
-            MainSkills.Add("Wisdom");
-            MainSkills.Add("Charisma");
-        }
+        private static List<string> MainSkills;
 
         public static void saveLists() {
             SerializeAlliance(Alliances);
             SerializeLocation(Locations);
             SerializeNPC(NPCs);
             SerializeSkill(Skills);
+            SerializeMainSkills(MainSkills);
         }
 
         public static void addAlliance(Alliance alliance) {
@@ -110,11 +101,23 @@ namespace rpUtility {
             }
         }
 
+        public static void removeMainSkill(int index) {
+            if (MainSkills.Count() >= index) {
+                try {
+                    MainSkills.RemoveAt(index);
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
         public static void createLists() {
             Alliances = new List<Alliance>();
             NPCs = new List<NPC>();
             Locations = new List<Location>();
             Skills = new List<Skill>();
+            MainSkills = new List<string>();
         }
 
         public static void readAlliances() {
@@ -128,6 +131,13 @@ namespace rpUtility {
             NPCs = DeserializeNPC();
             if (NPCs == null) {
                 NPCs = new List<NPC>();
+            }
+        }
+
+        public static void readMainSkills() {
+            MainSkills = DeserializeMainSkills();
+            if (MainSkills == null) {
+                MainSkills = new List<string>();
             }
         }
 
@@ -254,6 +264,48 @@ namespace rpUtility {
                         Skills.Add(s);
                     }
                 }
+            }
+        }
+
+        public static List<string> DeserializeMainSkills() {
+            if (System.IO.File.Exists(MainSkillFile)) {
+                using (var file = System.IO.File.OpenRead(MainSkillFile)) {
+                    var reader = new BinaryFormatter();
+                    return (List<string>)reader.Deserialize(file);
+                }
+            }
+            else {
+                return null;
+            }
+        }
+
+        public static void SerializeMainSkills (List<string> input) {
+            using (var file = System.IO.File.OpenWrite(MainSkillFile)) {
+                var writer = new BinaryFormatter();
+                writer.Serialize(file, MainSkills);
+            }
+        }
+
+        public static List<string> getMainSkills() {
+            List<string> ret = new List<string>();
+            foreach (string s in MainSkills) {
+                ret.Add(s);
+            }
+            return ret;
+        }
+
+        public static void addMainSkills(string name) {
+            bool pass = true;
+            foreach (string s in MainSkills) {
+                if (name.ToLower() == s.ToLower()) {
+                    pass = false;
+                }
+            }
+            if (name == null || name == "") {
+                pass = false;
+            }
+            if (pass) {
+                MainSkills.Add(name);
             }
         }
     }

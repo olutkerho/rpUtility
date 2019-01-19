@@ -13,15 +13,17 @@ namespace rpUtility {
         public FrmAddSkills() {
             InitializeComponent();
             RefreshSkills();
-            cmbMainSkill.DataSource = Binary.MainSkills;
+            RefreshComboBox();
+            MainSkills = Binary.getMainSkills();
         }
 
-        List<Skill> skills;
+        List<Skill> Skills;
+        List<string> MainSkills;
 
         private void btnAddSkill_Click(object sender, EventArgs e) {
-            if (tbName.Text != "" && Binary.MainSkills.Contains(cmbMainSkill.Text)) {
+            if (tbName.Text != "" && MainSkills.Contains(cmbMainSkill.Text)) {
                 bool pass = true;
-                foreach (Skill s in skills) {
+                foreach (Skill s in Skills) {
                     if (s.getName().ToLower() == tbName.Text.ToLower()) {
                         pass = false;
                     }
@@ -48,9 +50,9 @@ namespace rpUtility {
 
         private void RefreshSkills() {
             Binary.sortSkills();
-            skills = Binary.CloneSkills();
+            Skills = Binary.CloneSkills();
             flpSkills.Controls.Clear();
-            foreach (Skill s in skills) {
+            foreach (Skill s in Skills) {
                 Label lb = new Label();
                 lb.Size = new Size(150, 15);
                 lb.Margin = new Padding(0, 3, 0, 3);
@@ -84,15 +86,40 @@ namespace rpUtility {
                     controls.Add(ct);
                     foreach (CheckBox c in controls) {
                         if (c.Checked) {
-                            int i = skills.FindIndex(skill => skill.getName() == ct.Tag.ToString());
+                            int i = Skills.FindIndex(skill => skill.getName() == ct.Tag.ToString());
                             Binary.removeSkill(i);
-                            skills = Binary.CloneSkills();
+                            Skills = Binary.CloneSkills();
                         }
                     }
                     controls = new List<Control>();
                 }
             }
             RefreshSkills();
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            FrmAddMainSkill frm = new FrmAddMainSkill();
+            frm.ShowDialog();
+        }
+
+        public void RefreshComboBox() {
+            cmbMainSkill.DataSource = null;
+            cmbMainSkill.DataSource = Binary.getMainSkills();
+        }
+
+        private void FrmAddSkills_Enter(object sender, EventArgs e) {
+            RefreshComboBox();
+        }
+
+        private void FrmAddSkills_Activated(object sender, EventArgs e) {
+            RefreshComboBox();
+        }
+
+        private void tbName_KeyDown(object sender, KeyEventArgs e) {
+            if (e.KeyData == Keys.Enter) {
+                e.Handled = true;
+                btnAddSkill_Click(cmbMainSkill, e);
+            }
         }
     }
 }

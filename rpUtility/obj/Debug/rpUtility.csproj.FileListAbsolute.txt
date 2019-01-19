@@ -17,7 +17,6 @@ C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.Gen
 C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.csproj.CoreCompileInputs.cache
 C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.exe
 C:\Users\s717470\Source\Repos\rpUtility\rpUtility\obj\Debug\rpUtility.pdb
-C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.MainForm.resources
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.csprojAssemblyReference.cache
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmCreateNPC.resources
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddSkills.resources
@@ -38,3 +37,7 @@ C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.pd
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddRoleplayInfo.resources
 C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddRoleplayInfo.resources
 C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddAttack.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddAttack.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddMainSkill.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmMain.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmCreateNPCPrompt.resources
