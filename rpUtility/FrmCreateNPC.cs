@@ -15,11 +15,37 @@ namespace rpUtility
         public FrmCreateNPC()
         {
             InitializeComponent();
+            AtkList = new List<Attack>();
             RefreshAttacksList();
         }
 
+        List<Attack> AtkList;
+
         private void RefreshAttacksList()
         {
+            flpAttacksAndSpellCasting.Controls.Clear();
+
+            foreach (Attack a in AtkList)
+            {
+                Label lb = new Label();
+                lb.Text = a.getName();
+
+                Button btnDelete = new Button();
+                btnDelete.Text = "Delete";
+                btnDelete.Tag = a.getName();
+                btnDelete.Click += new EventHandler(btnDelete_Click);
+
+                Button btnModify = new Button();
+                btnModify.Text = "Modify";
+                btnModify.Tag = a.getName();
+                btnModify.Click += new EventHandler(btnModify_Click);
+
+
+                flpAttacksAndSpellCasting.Controls.Add(lb);
+                flpAttacksAndSpellCasting.Controls.Add(btnModify);
+                flpAttacksAndSpellCasting.Controls.Add(btnDelete);
+                
+            }
         }
 
         private void btnCreateNPC_Click(object sender, EventArgs e) {
@@ -50,6 +76,7 @@ namespace rpUtility
             stats.setIntelligenceMod();
             stats.setWisdomMod();
             stats.setCharismaMod();
+            stats.setAttacks(AtkList);
             npc.setStats(stats);
 
             MessageBox.Show("lisätty");
@@ -64,8 +91,33 @@ namespace rpUtility
 
         private void btnAddAttack_Click(object sender, EventArgs e)
         {
-            FrmAddAttack f = new FrmAddAttack();
+            FrmAddAttack f = new FrmAddAttack(AtkList, true, "");
             f.ShowDialog();
+            RefreshAttacksList();
+        }
+
+        // Poistaa valitun attackin listasta
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            try
+            {
+                // hakee attackin napin tagin perusteella listasta
+                AtkList.RemoveAt(AtkList.FindIndex(a => a.getName() == btn.Tag.ToString()));
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            FrmAddAttack f = new FrmAddAttack(AtkList, false, btn.Tag.ToString());
+            f.ShowDialog();
+            RefreshAttacksList();
         }
     }
 }

@@ -36,3 +36,5 @@ C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.cs
 C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.exe
 C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.pdb
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddRoleplayInfo.resources
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddRoleplayInfo.resources
+C:\Users\Tommi\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddAttack.resources
