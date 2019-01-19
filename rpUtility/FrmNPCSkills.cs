@@ -76,6 +76,7 @@ namespace rpUtility {
                     controls = new List<Control>();
                 }
             }
+            Close();
         }
     }
 }

@@ -78,12 +78,6 @@
     <Compile Include="FrmCreateNPC.Designer.cs">
       <DependentUpon>FrmCreateNPC.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCreateNPCPrompt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCreateNPCPrompt.Designer.cs">
-      <DependentUpon>FrmCreateNPCPrompt.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmNPCSkills.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCreateNPC.resx">
       <DependentUpon>FrmCreateNPC.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCreateNPCPrompt.resx">
-      <DependentUpon>FrmCreateNPCPrompt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNPCSkills.resx">
       <DependentUpon>FrmNPCSkills.cs</DependentUpon>
