@@ -17,11 +17,13 @@ namespace rpUtility
             InitializeComponent();
             AtkList = new List<Attack>();
             RefreshAttacksList();
-            npc = new NPC();
+            NPC = new NPC();
+            Stats = new Stats();
         }
 
-        NPC npc;
+        NPC NPC;
         List<Attack> AtkList;
+        Stats Stats;
 
         private void RefreshAttacksList()
         {
@@ -51,41 +53,42 @@ namespace rpUtility
         }
 
         private void btnCreateNPC_Click(object sender, EventArgs e) { 
-            npc.setFirstName(tbFirstName.Text);
-            if (npc.getFirstName() != "") {
-                npc.setLastName(tbLastName.Text);
-                npc.setAge(int.Parse(mtbAge.Text));
-                npc.setRace(tbRace.Text);
-                npc.setAlignment(tbAlignment.Text);
-                npc.setSex(tbSex.Text);
-                npc.setLevel(int.Parse(mtbLevel.Text));
-                Stats stats = new Stats();
-                stats.setStrength(int.Parse(mtbSrength.Text));
-                stats.setDexterity(int.Parse(mtbDexterity.Text));
-                stats.setConstitution(int.Parse(mtbConstitution.Text));
-                stats.setIntelligence(int.Parse(mtbIntelligence.Text));
-                stats.setWisdom(int.Parse(mtbWisdom.Text));
-                stats.setCharisma(int.Parse(mtbCharisma.Text));
-                stats.setArmorClass(int.Parse(mtbArmorClass.Text));
-                stats.setSpeed(int.Parse(mtbSpeed.Text));
-                stats.setHpMax(int.Parse(mtbHpMax.Text));
-                stats.setHpCurrent(stats.getHpMax());
-                stats.setHpTemp(0);
-                stats.setProficiencyBonus(int.Parse(mtbProficiencyBonus.Text));
-                stats.setStrengthMod();
-                stats.setDexterityMod();
-                stats.setConstitutionMod();
-                stats.setIntelligenceMod();
-                stats.setWisdomMod();
-                stats.setCharismaMod();
-                stats.setAttacks(AtkList);
+            NPC.setFirstName(tbFirstName.Text);
+            if (NPC.getFirstName() != "") {
+                NPC.setLastName(tbLastName.Text);
+                NPC.setAge(int.Parse(mtbAge.Text));
+                NPC.setRace(tbRace.Text);
+                NPC.setAlignment(tbAlignment.Text);
+                NPC.setSex(tbSex.Text);
+                NPC.setLevel(int.Parse(mtbLevel.Text));
+                Stats.setStrength(int.Parse(mtbSrength.Text));
+                Stats.setDexterity(int.Parse(mtbDexterity.Text));
+                Stats.setConstitution(int.Parse(mtbConstitution.Text));
+                Stats.setIntelligence(int.Parse(mtbIntelligence.Text));
+                Stats.setWisdom(int.Parse(mtbWisdom.Text));
+                Stats.setCharisma(int.Parse(mtbCharisma.Text));
+                Stats.setArmorClass(int.Parse(mtbArmorClass.Text));
+                Stats.setSpeed(int.Parse(mtbSpeed.Text));
+                Stats.setHpMax(int.Parse(mtbHpMax.Text));
+                Stats.setHpCurrent(Stats.getHpMax());
+                Stats.setHpTemp(0);
+                Stats.setProficiencyBonus(int.Parse(mtbProficiencyBonus.Text));
+                Stats.setStrengthMod();
+                Stats.setDexterityMod();
+                Stats.setConstitutionMod();
+                Stats.setIntelligenceMod();
+                Stats.setWisdomMod();
+                Stats.setCharismaMod();
+                Stats.setAttacks(AtkList);
                 List<Skill> Skills = FrmNPCSkills.getNPCSkills();
-                stats.setSkills(Skills);
-                npc.setStats(stats);
+                Stats.setSkills(Skills);
+                NPC.setStats(Stats);
 
                 MessageBox.Show("lisätty");
-                Binary.addNPC(npc);
+                Binary.addNPC(NPC);
                 Binary.saveLists();
+                NPC = new NPC();
+                Stats = new Stats();
             }
             else {
                 MessageBox.Show("You cannot create an npc without a first name.");
@@ -150,6 +153,11 @@ namespace rpUtility
 
         private void btnClearAll_Click(object sender, EventArgs e) {
             clearForm();
+        }
+
+        private void btnSpells_Click(object sender, EventArgs e) {
+            FrmAddSpells frm = new FrmAddSpells(Stats);
+            frm.ShowDialog();
         }
     }
 }

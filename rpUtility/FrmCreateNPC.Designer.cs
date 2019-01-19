@@ -68,6 +68,7 @@
             this.flpAttacksAndSpellCasting = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAddAttack = new System.Windows.Forms.Button();
             this.btnClearAll = new System.Windows.Forms.Button();
+            this.btnSpells = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -422,11 +423,22 @@
             this.btnClearAll.UseVisualStyleBackColor = true;
             this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
+            // btnSpells
+            // 
+            this.btnSpells.Location = new System.Drawing.Point(1037, 100);
+            this.btnSpells.Name = "btnSpells";
+            this.btnSpells.Size = new System.Drawing.Size(118, 38);
+            this.btnSpells.TabIndex = 39;
+            this.btnSpells.Text = "Spells";
+            this.btnSpells.UseVisualStyleBackColor = true;
+            this.btnSpells.Click += new System.EventHandler(this.btnSpells_Click);
+            // 
             // FrmCreateNPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1191, 700);
+            this.Controls.Add(this.btnSpells);
             this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.btnAddAttack);
             this.Controls.Add(this.flpAttacksAndSpellCasting);
@@ -516,5 +528,6 @@
         private System.Windows.Forms.FlowLayoutPanel flpAttacksAndSpellCasting;
         private System.Windows.Forms.Button btnAddAttack;
         private System.Windows.Forms.Button btnClearAll;
+        private System.Windows.Forms.Button btnSpells;
     }
 }

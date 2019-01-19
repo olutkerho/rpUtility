@@ -72,6 +72,12 @@
     <Compile Include="FrmAddSkills.Designer.cs">
       <DependentUpon>FrmAddSkills.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddSpells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddSpells.Designer.cs">
+      <DependentUpon>FrmAddSpells.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCreateNPC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddSkills.resx">
       <DependentUpon>FrmAddSkills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddSpells.resx">
+      <DependentUpon>FrmAddSpells.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCreateNPC.resx">
       <DependentUpon>FrmCreateNPC.cs</DependentUpon>

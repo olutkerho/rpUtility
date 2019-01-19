@@ -305,5 +305,21 @@ namespace rpUtility {
 
             this.Attacks = Attacks;
         }
+
+        public List<Spell> getSpells(){
+            List<Spell> ret = new List<Spell>();
+            Spell ss = new Spell();
+            foreach (Spell s in Spells) {
+                ss.setCastTime(s.getCastTime());
+                ss.setDamage(s.getDamage());
+                ss.setDuration(s.getDuration());
+                ss.setLevel(s.getLevel());
+                ss.setName(s.getName());
+                ss.setRange(s.getRange());
+                ss.setSchool(s.getSchool());
+                ret.Add(ss);
+            }
+            return ret;
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Windows.Forms;
 namespace rpUtility {
     [Serializable]
     public class Spell {
+        private string Name;
         private int Level;
         private string School;
         private List<string> Components;
@@ -18,6 +19,18 @@ namespace rpUtility {
 
         public Spell() {
             Components = new List<string>();
+        }
+
+        public void setName(string name) {
+            Name = name;
+        }
+
+        public string getName() {
+            string ret = "";
+            if (Name != null) {
+                ret = Name;
+            }
+            return ret;
         }
 
         public void setLevel(int level) {
