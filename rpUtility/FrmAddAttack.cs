@@ -15,49 +15,76 @@ namespace rpUtility
         List<Attack> list;
         Attack att;
 
-
         bool isNew;
+        bool ifExists;
 
-        public FrmAddAttack(List<Attack> AtkList)
+        public FrmAddAttack(List<Attack> AtkList, bool isIt, string tag)
         {
             InitializeComponent();
             list = AtkList;
-            isNew = true;
-        }
+            isNew = isIt;
 
-        public FrmAddAttack(Attack Atk)
-        {
-            isNew = false;
+            if (isIt == false)
+            {
+                att = AtkList[AtkList.FindIndex(a => a.getName() == tag)];
+                btnAdd.Text = "Save changes";
 
-            InitializeComponent();
+                tbName.Text = att.getName();
+                tbHitBonus.Text = att.getHitBonus().ToString();
+                tbDamage.Text = att.getDamage();
+                tbDamageType.Text = att.getDamageType();
+                tbRange.Text = att.getRange().ToString();
+            }
 
-            tbName.Text = Atk.getName();
-            tbHitBonus.Text = Atk.getHitBonus().ToString();
-            tbDamage.Text = Atk.getDamage();
-            tbDamageType.Text = Atk.getDamageType();
-            tbRange.Text = Atk.getRange().ToString();
         }
 
         private void modifyAtk(Attack att)
         {
+            foreach(Attack a in list)
+            {
+                if (a.getName() == tbName.Text)
+                {
+                    ifExists = true;
+                    MessageBox.Show("You cannot create two attacks with same name!");
+                    return;
+                }
+            }
+
             att.setName(tbName.Text);
             att.setHitBonus(int.Parse(tbHitBonus.Text));
-            att.setDamage(tbHitBonus.Text);
+            att.setDamage(tbDamage.Text);
             att.setDamageType(tbDamageType.Text);
             att.setRange(int.Parse(tbRange.Text));
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(tbName.Text) || string.IsNullOrEmpty(tbHitBonus.Text) || string.IsNullOrEmpty(tbDamage.Text) || string.IsNullOrEmpty(tbDamageType.Text) || string.IsNullOrEmpty(tbRange.Text))
+            {
+                MessageBox.Show("You cannot leave empty fields!");
+                return;
+            }
+
             if (isNew)
             {
                 att = new Attack();
                 modifyAtk(att);
+                
+                if (ifExists)
+                {
+                    return;
+                }
+
                 list.Add(att);
             }
             else
             {
                 modifyAtk(att);
+
+                if (ifExists)
+                {
+                    return;
+                }
             }
             
             Close();

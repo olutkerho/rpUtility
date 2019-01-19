@@ -99,6 +99,9 @@
     <Compile Include="SpellSlot.cs" />
     <Compile Include="Stats.cs" />
     <Compile Include="Binary.cs" />
+    <EmbeddedResource Include="FrmAddAttack.resx">
+      <DependentUpon>FrmAddAttack.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddRoleplayInfo.resx">
       <DependentUpon>FrmAddRoleplayInfo.cs</DependentUpon>
     </EmbeddedResource>

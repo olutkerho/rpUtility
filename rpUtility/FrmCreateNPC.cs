@@ -91,7 +91,7 @@ namespace rpUtility
 
         private void btnAddAttack_Click(object sender, EventArgs e)
         {
-            FrmAddAttack f = new FrmAddAttack(AtkList);
+            FrmAddAttack f = new FrmAddAttack(AtkList, true, "");
             f.ShowDialog();
             RefreshAttacksList();
         }
@@ -115,8 +115,9 @@ namespace rpUtility
         private void btnModify_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            FrmAddAttack f = new FrmAddAttack(AtkList[AtkList.FindIndex(a => a.getName() == btn.Tag.ToString())]);
+            FrmAddAttack f = new FrmAddAttack(AtkList, false, btn.Tag.ToString());
             f.ShowDialog();
+            RefreshAttacksList();
         }
     }
 }
