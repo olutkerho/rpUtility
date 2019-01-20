@@ -308,8 +308,8 @@ namespace rpUtility {
 
         public List<Spell> getSpells(){
             List<Spell> ret = new List<Spell>();
-            Spell ss = new Spell();
             foreach (Spell s in Spells) {
+                Spell ss = new Spell();
                 ss.setCastTime(s.getCastTime());
                 ss.setDamage(s.getDamage());
                 ss.setDuration(s.getDuration());
@@ -336,6 +336,27 @@ namespace rpUtility {
                 Spells.Add(ss);
             }
             
+        }
+
+        public List<SpellSlot> getSpellSlots() {
+            List<SpellSlot> ret = new List<SpellSlot>();
+            foreach (SpellSlot s in SpellSlots) {
+                SpellSlot ss = new SpellSlot();
+                ss.setAmount(s.getAmount());
+                ss.setLevel(s.getLevel());
+                ret.Add(ss);
+            }
+            return ret;
+        }
+
+        public void setSpellSlots(List<SpellSlot> spellslots) {
+            SpellSlots = new List<SpellSlot>();
+            foreach (SpellSlot s in spellslots) {
+                SpellSlot ss = new SpellSlot();
+                ss.setAmount(s.getAmount());
+                ss.setLevel(s.getLevel());
+                SpellSlots.Add(ss);
+            }
         }
     }
 }

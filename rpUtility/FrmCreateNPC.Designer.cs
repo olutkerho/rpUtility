@@ -69,6 +69,7 @@
             this.btnAddAttack = new System.Windows.Forms.Button();
             this.btnClearAll = new System.Windows.Forms.Button();
             this.btnSpells = new System.Windows.Forms.Button();
+            this.btnSpellSlots = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -433,11 +434,22 @@
             this.btnSpells.UseVisualStyleBackColor = true;
             this.btnSpells.Click += new System.EventHandler(this.btnSpells_Click);
             // 
+            // btnSpellSlots
+            // 
+            this.btnSpellSlots.Location = new System.Drawing.Point(1037, 144);
+            this.btnSpellSlots.Name = "btnSpellSlots";
+            this.btnSpellSlots.Size = new System.Drawing.Size(118, 38);
+            this.btnSpellSlots.TabIndex = 40;
+            this.btnSpellSlots.Text = "Spellslots";
+            this.btnSpellSlots.UseVisualStyleBackColor = true;
+            this.btnSpellSlots.Click += new System.EventHandler(this.btnSpellSlots_Click);
+            // 
             // FrmCreateNPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1191, 700);
+            this.Controls.Add(this.btnSpellSlots);
             this.Controls.Add(this.btnSpells);
             this.Controls.Add(this.btnClearAll);
             this.Controls.Add(this.btnAddAttack);
@@ -529,5 +541,6 @@
         private System.Windows.Forms.Button btnAddAttack;
         private System.Windows.Forms.Button btnClearAll;
         private System.Windows.Forms.Button btnSpells;
+        private System.Windows.Forms.Button btnSpellSlots;
     }
 }

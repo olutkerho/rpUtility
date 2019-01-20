@@ -223,9 +223,9 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(152, 348);
+            this.btnRemove.Location = new System.Drawing.Point(157, 348);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(120, 90);
+            this.btnRemove.Size = new System.Drawing.Size(115, 90);
             this.btnRemove.TabIndex = 12;
             this.btnRemove.Text = "Remove selected";
             this.btnRemove.UseVisualStyleBackColor = true;

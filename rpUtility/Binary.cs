@@ -19,6 +19,23 @@ namespace rpUtility {
         private static List<Location> Locations;
         private static List<Skill> Skills;
         private static List<string> MainSkills;
+        private static List<int> SpellLevels;
+
+        //Placeholder!!!
+        public static void setSpellLevels() {
+            SpellLevels = new List<int>();
+            for(int i = 1; i <= 9; i++) {
+                SpellLevels.Add(i);
+            }
+        }
+
+        public static List<int> getSpellLevels() {
+            List<int> ret = new List<int>();
+            foreach (int i in SpellLevels) {
+                ret.Add(i);
+            }
+            return ret;
+        }
 
         public static void saveLists() {
             SerializeAlliance(Alliances);

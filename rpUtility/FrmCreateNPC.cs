@@ -160,5 +160,10 @@ namespace rpUtility
             FrmAddSpells frm = new FrmAddSpells(Stats);
             frm.ShowDialog();
         }
+
+        private void btnSpellSlots_Click(object sender, EventArgs e) {
+            FrmAddSpellslots frm = new FrmAddSpellslots(Stats);
+            frm.ShowDialog();
+        }
     }
 }

@@ -78,6 +78,12 @@
     <Compile Include="FrmAddSpells.Designer.cs">
       <DependentUpon>FrmAddSpells.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddSpellslots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddSpellslots.Designer.cs">
+      <DependentUpon>FrmAddSpellslots.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCreateNPC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddSpells.resx">
       <DependentUpon>FrmAddSpells.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddSpellslots.resx">
+      <DependentUpon>FrmAddSpellslots.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCreateNPC.resx">
       <DependentUpon>FrmCreateNPC.cs</DependentUpon>
