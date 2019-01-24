@@ -165,5 +165,10 @@ namespace rpUtility
             FrmAddSpellslots frm = new FrmAddSpellslots(Stats);
             frm.ShowDialog();
         }
+
+        private void btnGear_Click(object sender, EventArgs e) {
+            FrmInventory frm = new FrmInventory(NPC);
+            frm.ShowDialog();
+        }
     }
 }

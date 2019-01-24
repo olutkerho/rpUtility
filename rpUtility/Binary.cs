@@ -24,7 +24,7 @@ namespace rpUtility {
         //Placeholder!!!
         public static void setSpellLevels() {
             SpellLevels = new List<int>();
-            for(int i = 1; i <= 9; i++) {
+            for (int i = 1; i <= 9; i++) {
                 SpellLevels.Add(i);
             }
         }
@@ -296,7 +296,7 @@ namespace rpUtility {
             }
         }
 
-        public static void SerializeMainSkills (List<string> input) {
+        public static void SerializeMainSkills(List<string> input) {
             using (var file = System.IO.File.OpenWrite(MainSkillFile)) {
                 var writer = new BinaryFormatter();
                 writer.Serialize(file, MainSkills);

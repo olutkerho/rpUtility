@@ -70,6 +70,7 @@
             this.btnClearAll = new System.Windows.Forms.Button();
             this.btnSpells = new System.Windows.Forms.Button();
             this.btnSpellSlots = new System.Windows.Forms.Button();
+            this.btnGear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -444,11 +445,22 @@
             this.btnSpellSlots.UseVisualStyleBackColor = true;
             this.btnSpellSlots.Click += new System.EventHandler(this.btnSpellSlots_Click);
             // 
+            // btnGear
+            // 
+            this.btnGear.Location = new System.Drawing.Point(1037, 188);
+            this.btnGear.Name = "btnGear";
+            this.btnGear.Size = new System.Drawing.Size(118, 38);
+            this.btnGear.TabIndex = 41;
+            this.btnGear.Text = "Gear";
+            this.btnGear.UseVisualStyleBackColor = true;
+            this.btnGear.Click += new System.EventHandler(this.btnGear_Click);
+            // 
             // FrmCreateNPC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1191, 700);
+            this.Controls.Add(this.btnGear);
             this.Controls.Add(this.btnSpellSlots);
             this.Controls.Add(this.btnSpells);
             this.Controls.Add(this.btnClearAll);
@@ -542,5 +554,6 @@
         private System.Windows.Forms.Button btnClearAll;
         private System.Windows.Forms.Button btnSpells;
         private System.Windows.Forms.Button btnSpellSlots;
+        private System.Windows.Forms.Button btnGear;
     }
 }

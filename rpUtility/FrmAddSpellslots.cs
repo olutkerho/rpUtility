@@ -65,6 +65,7 @@ namespace rpUtility {
             }
             else {
                 Stats.setSpellSlots(SpellSlots);
+                this.Close();
             }
         }
     }

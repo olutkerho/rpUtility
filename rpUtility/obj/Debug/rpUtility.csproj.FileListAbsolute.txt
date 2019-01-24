@@ -42,3 +42,6 @@ C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.Fr
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmMain.resources
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddSpells.resources
 C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddSpellslots.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmInventory.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddGear.resources
+C:\Users\leowq\Source\Repos\olutkerho\rpUtility\rpUtility\obj\Debug\rpUtility.FrmAddCargo.resources

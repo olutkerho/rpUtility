@@ -48,11 +48,24 @@
   <ItemGroup>
     <Compile Include="Alliance.cs" />
     <Compile Include="Attack.cs" />
+    <Compile Include="Cargo.cs" />
     <Compile Include="FrmAddAttack.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAddAttack.Designer.cs">
       <DependentUpon>FrmAddAttack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddCargo.Designer.cs">
+      <DependentUpon>FrmAddCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddGear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddGear.Designer.cs">
+      <DependentUpon>FrmAddGear.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAddMainSkill.cs">
       <SubType>Form</SubType>
@@ -90,6 +103,12 @@
     <Compile Include="FrmCreateNPC.Designer.cs">
       <DependentUpon>FrmCreateNPC.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventory.Designer.cs">
+      <DependentUpon>FrmInventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNPCSkills.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +139,12 @@
     <EmbeddedResource Include="FrmAddAttack.resx">
       <DependentUpon>FrmAddAttack.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddCargo.resx">
+      <DependentUpon>FrmAddCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddGear.resx">
+      <DependentUpon>FrmAddGear.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddMainSkill.resx">
       <DependentUpon>FrmAddMainSkill.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCreateNPC.resx">
       <DependentUpon>FrmCreateNPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventory.resx">
+      <DependentUpon>FrmInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNPCSkills.resx">
       <DependentUpon>FrmNPCSkills.cs</DependentUpon>

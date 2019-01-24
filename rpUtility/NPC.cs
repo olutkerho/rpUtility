@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace rpUtility {
     [Serializable]
-    public class NPC{
+    public class NPC {
         private string FirstName;
         private string LastName;
         private int Age;
@@ -17,7 +17,7 @@ namespace rpUtility {
         private int Xp;
         private string Bio;
         private string Location;
-        private List<Gear> GearList;
+        private List<Cargo> _cargo;
         private string Alliance;
         private Relations Relations;
         private Stats Stats;
@@ -33,9 +33,13 @@ namespace rpUtility {
         private string Race;
         private int ID;
 
+        public List<Cargo> Cargo {
+            get { return _cargo; }
+            set { _cargo = value; }
+        }
 
         public NPC(){
-            GearList = new List<Gear>();
+            Cargo = new List<Cargo>();
             Secrets = new List<string>();
             Flaws = new List<string>();
             Perks = new List<string>();
@@ -319,5 +323,6 @@ namespace rpUtility {
             RoleplayInfo.setTalkSpeed(rp.getTalkSpeed());
             RoleplayInfo.setVoiceType(rp.getVoiceType());
         }
+
     }
 }
